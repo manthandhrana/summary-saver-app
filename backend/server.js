@@ -18,7 +18,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/bookmarks", require("./routes/bookmarkRoutes"));
 app.get("/", (req,res)=>{
-  res.statusCode(200).send("Welcome to Summary Saver App")
+  res.status(200).send("Welcome to Summary Saver App")
 });
 
 app.listen(process.env.PORT, () => {
