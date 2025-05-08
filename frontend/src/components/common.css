@@ -1,0 +1,143 @@
+/* Header.css */
+
+header {
+    padding: 1rem;
+    background: #0a0718;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.5s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #fe5303;
+  }
+  
+  @media (max-width: 600px) {
+    header {
+      text-align: center;
+    }
+  
+    nav {
+      justify-content: center;
+    }
+  }
+  
+footer{
+    background: #0a0718;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+.bookmark-container {
+  padding: 2rem;
+}
+
+.bookmark-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.bookmark-card {
+  border: 1px solid #ddd;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.add-bookmark-container {
+  position: relative;
+  padding: 1rem;
+}
+
+.popup-alert {
+  position: absolute;
+  top: 20px; /* shift above the form */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #f44336;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+  animation: fadeOut 3s forwards;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 0.8; }
+  100% { opacity: 0; }
+}
+
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+
+/* Add this to your common.css */
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #3498db;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.popup-alert {
+  background-color: #ffcccc;
+  color: #a94442;
+  padding: 10px;
+  margin-top: 10px;
+  border: 1px solid #a94442;
+  border-radius: 4px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
